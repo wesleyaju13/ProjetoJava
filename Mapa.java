@@ -14,13 +14,16 @@ import java.util.ArrayList;
 public class Mapa {
     
     private int[ ][ ][ ] array_dimensoes;
+    private Pisos pisos;
     
     public Mapa(int largura, int altura, int profundidade){ // PASSO OS PARAMETROS PARA O CONSTRUTOR, QUEM INSTANCIAR A CLASSE MAPA TEM QUE DIZER A ALTURA, LARGURA E PROFUNDIDADE
+        pisos = new Pisos(); // INSTANCIO O OBJETO DA CLASSE PISOS()
+        pisos.pegarTXT(); // USO A FUNCAO PRA PEGAR AS INFORMACOES DO ARQUIVO E SALVAR NO ARRAYLIST DO OBJETO
         int[][][] array_dimensoes = new int[largura][altura][profundidade]; // INICIO O ARRAY COM A LARGURA, ALTURA E PROFUNDIDADE PASSADAS
         for (int i=0; i <= profundidade; i++;) {
             for (int l=0; l <= altura; l++) {
                 for (int j=0; j <= largura; j++) {
-                    array_dimensoes[j][l][i] = // VOU CLIAR UMA FUNÇÃO NA CLASSE DE PISOS, PARA EU USAR AQUI.
+                    array_dimensoes[j][l][i] = pisos.pisoAleatorio(); // GERO UM NUMERO ALEATORIO DE PISOS PARA CADA SQM DO MAPA
                 }
             }
         }
