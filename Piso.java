@@ -14,6 +14,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
+import java.util.Random;
 
 /**
  *
@@ -86,6 +87,14 @@ public class Piso implements Serializable {
         else {
             // This is not a valid note number, so do nothing.
         }
+    }
+	
+    public int pisoAleatorio() {
+	    int Qntpisos = this.numberOfPisos(); // CRIO UMA VARIAVEL CHAMDA DE "Qntpisos" ONDE VAI ARMAZENAR A QUANTIDADE DE PISOS
+	    
+	    Random aleatorio = new Random(); // DECLARO UMA VARIAVEL DO TIPO RANDOM()
+	    
+	    return aleatorio.nextInt(Qntpisos+1); // RETORNO UM NUMERO ALEATORIO ENTRE 0 E Qntpisos
     }
     
 }
