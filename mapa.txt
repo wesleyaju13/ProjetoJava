@@ -1,0 +1,7 @@
+grama,true
+montanha,false
+agua,false
+areia,true
+rocha,true
+terra,true
+estacas,false
