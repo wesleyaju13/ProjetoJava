@@ -12,13 +12,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JOptionPane;
 import java.util.Random;
 
 /**
  *
- * @author Windows 7
+ * @author Wesley Almeida e Everton Recchi
  */
 public class Piso implements Serializable {
     
