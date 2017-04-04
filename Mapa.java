@@ -14,10 +14,10 @@ import java.util.ArrayList;
 public class Mapa {
     
     private int[ ][ ][ ] array_dimensoes;
-    private Pisos pisos;
+    private Piso pisos;
     
     public Mapa(int largura, int altura, int profundidade){ // PASSO OS PARAMETROS PARA O CONSTRUTOR, QUEM INSTANCIAR A CLASSE MAPA TEM QUE DIZER A ALTURA, LARGURA E PROFUNDIDADE
-        pisos = new Pisos(); // INSTANCIO O OBJETO DA CLASSE PISOS()
+        pisos = new Piso(); // INSTANCIO O OBJETO DA CLASSE PISOS()
         pisos.pegarTXT(); // USO A FUNCAO PRA PEGAR AS INFORMACOES DO ARQUIVO E SALVAR NO ARRAYLIST DO OBJETO
         int[][][] array_dimensoes = new int[largura][altura][profundidade]; // INICIO O ARRAY COM A LARGURA, ALTURA E PROFUNDIDADE PASSADAS
         for (int i=0; i <= profundidade; i++;) {
